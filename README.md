@@ -90,21 +90,10 @@ straight to the work loop. Commits are path-limited and never touch what you had
 You get one report: `RUN.md`'s path and status, the sharpest assumptions to veto, what needs you,
 and the next takeable ticket.
 
-## Also in this repo: `prune`
+## See also
 
-`skills/prune` trims a steering file — `CLAUDE.md`, `AGENTS.md`, `REVIEW.md`, a `SKILL.md`, agent
-definitions, memory files — line by line. Default verdict is **cut**; a line stays only if it
-passes three tests: **single source of truth** (the fact lives nowhere else), **not sediment** (still
-true, checked by grep, not by guess) and **not a no-op** (it changes behaviour versus the default).
-Safety, production and irreversibility rules are never cut as no-ops. One pass, one commit, with
-before/after counts per test.
-
-```bash
-cp -R spec-auto/skills/prune ~/.claude/skills/
-/prune CLAUDE.md
-```
-
-Model invocation is disabled: only you trigger it.
+[prune](https://github.com/BlackPhoenixSlo/prune) — trims steering files (`CLAUDE.md`, skills,
+memory) line by line.
 
 ## Credits
 
